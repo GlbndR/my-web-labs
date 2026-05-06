@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Моє Резюме</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Підключення JS для 4-ї лаби -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>[Андрій Глоба]</h1>
+        <p>Junior Cybersecurity Analyst / Trainee SOC Analyst</p>
+        <p>📍 м. Львів, Україна (віддалена робота)</p>
+        <p>✉️ <a href="mailto:email@example.com">email@example.com</a> | 📞 +380 74856936</p>
+        <p>🔗 <a href="https://linkedin.com">LinkedIn</a> | <a href="https://github.com">GitHub</a></p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Профіль (Summary)</h2>
+            <p>Цілеспрямований студент спеціальності "Кібербезпека" з міцним розумінням принципів захисту інформації, мережевого аналізу та криптографії. Маю практичний досвід роботи з інструментами моніторингу трафіку та розробки на Python. Шукаю позицію Junior Security Analyst для застосування аналітичних навичок у виявленні вразливостей та реагуванні на кіберінциденти, з орієнтиром на віддалену співпрацю та бажаним рівнем доходу від 30 000 грн.</p>
+        </section>
+
+        <section>
+            <h2>Технічні навички (Technical Skills)</h2>
+            <ul>
+                <li><strong>Кібербезпека та мережі:</strong> Етичний хакінг, сканування мереж, OSINT, аналіз мережевого трафіку.</li>
+                <li><strong>Інструменти:</strong> Wireshark.</li>
+                <li><strong>Програмування:</strong> Python, JavaScript.</li>
+                <li><strong>Криптографія:</strong> Афінний шифр, алгоритм Blum-Blum-Shub.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Практичний досвід та навчальні проєкти</h2>
+            <h3>Проєкти з прикладної криптографії</h3>
+            <ul>
+                <li>Реалізував алгоритми дешифрування тексту з використанням афінного шифру.</li>
+                <li>Розробив інструмент для генерації псевдовипадкових бітів на основі алгоритму Blum-Blum-Shub (BBS).</li>
+            </ul>
+            <h3>Розробка програмного забезпечення</h3>
+            <ul>
+                <li>Створив десктопний додаток за допомогою бібліотеки tkinter для управління та взаємодії з базою даних.</li>
+            </ul>
+            <h3>Мережевий аналіз та OSINT</h3>
+            <ul>
+                <li>Проводив практичний аналіз та перехоплення мережевого трафіку за допомогою Wireshark.</li>
+                <li>Застосовував методи розвідки на основі відкритих джерел (OSINT).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <p><strong>Національний університет "Львівська політехніка"</strong></p>
+            <p>Студент, спеціальність: 125 Кібербезпека</p>
+        </section>
+
+        <!-- НОВА СЕКЦІЯ: Fetch API -->
+        <section>
+            <h2>Відгуки роботодавців (Fetch API)</h2>
+            <div id="comments-container">Завантаження коментарів...</div>
+        </section>
+
+        <!-- НОВА СЕКЦІЯ: Модальне вікно (з'явиться через 1 хв) -->
+        <div id="feedback-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>Зворотний зв'язок</h2>
+                <form action="https://formspree.io/f/ТВІЙ_КОД_ТУТ" method="POST">
+                    <label>Ім'я: <br><input type="text" name="name" required></label><br><br>
+                    <label>Email: <br><input type="email" name="email" required></label><br><br>
+                    <label>Телефон: <br><input type="tel" name="phone"></label><br><br>
+                    <label>Повідомлення: <br><textarea name="message" required></textarea></label><br><br>
+                    <button type="submit">Відправити</button>
+                    <button type="button" id="close-modal">Закрити</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>Резюме створено в рамках Лабораторної роботи №2</p>
+    </footer>
+
+</body>
+</html>
