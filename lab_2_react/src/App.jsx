@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Reviews from './components/Reviews';
 import ContactForm from './components/ContactForm';
 import CyberCore from './components/CyberCore';
-import SkillsShowcase from './components/SkillsShowcase'; // <-- Імпорт нових карток
+import SkillsShowcase from './components/SkillsShowcase';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -26,6 +26,8 @@ function App() {
 
   return (
     <div className={theme === 'dark' ? 'bg-slate-900 text-white min-h-screen transition-colors duration-500' : 'bg-slate-50 text-slate-900 min-h-screen transition-colors duration-500'}>
+      
+      {/* Головний контент сайту обгорнутий в container */}
       <div className="container mx-auto p-4 md:p-8">
         
         {/* Кнопка зміни теми */}
@@ -75,15 +77,19 @@ function App() {
               <span className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white text-sm">01</span>
               Відгуки з мережі
             </h3>
-            {/* Я закоментував Reviews, щоб тестовий текст поки не заважав */}
             {/* <Reviews /> */}
           </section>
         </main>
 
         <Footer />
-        <ContactForm />
-        
       </div>
+
+      {/* ПЕРЕНЕСЕНО СЮДИ:
+        Модальне вікно винесене за межі '.container' на самий верхній рівень DOM.
+        Тепер воно перекриватиме абсолютно все на сторінці.
+      */}
+      <ContactForm />
+
     </div>
   );
 }
